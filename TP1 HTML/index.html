@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TP N°1 HTML</title>
+  </head>
+  <body>
+    <header>
+      <h1>Encabezado Principal</h1>
+      <ul>
+        <li>
+          <a href="#estructura">Estructura</a>
+        </li>
+        <li>
+          <a href="#multimedia">Multimedia</a>
+        </li>
+        <li>
+          <a href="#formulario">Formulario</a>
+        </li>
+      </ul>
+    </header>
+    <h1 id="estructura">1. Estructura Basica del Documento HTML</h1>
+    <p>
+      Este documento HTML, tiene una estructura basica que incluye la
+      declaracion de DOCTYPE, etiquetas de metadatos y un titulo
+    </p>
+    <h2>2. Encabezados y Propiedades del Texto</h2>
+    <p><b> Este es un texto en negrita </b></p>
+    <p><i>Este es un texto en cursiva</i></p>
+    <p><u>Este es un texto subrayado</u></p>
+    <h3>3. Divisiones y Agrupacion de Contenido</h3>
+    <div>
+      <h2>Seccion 1</h2>
+      <p>Contenido de la primera seccion agrupada en un div</p>
+    </div>
+    <div>
+      <h2>Seccion 2</h2>
+      <p>Contenido de la segunda seccion agrupada en un div</p>
+    </div>
+    <h4>4. Enlaces y Listas</h4>
+    <p>
+      Visita nuestro <a href="index.html">sitio web</a> para mas informacion
+    </p>
+    <div>
+      <p>Enlaces internos:</p>
+      <ul>
+        <li>
+          <a href="#estructura">Ir a Estructura</a>
+        </li>
+        <li>
+          <a href="#multimedia">Ir a Multimedia</a>
+        </li>
+        <li>
+          <a href="#formulario">Ir a Formulario</a>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <p>Lista desordenada:</p>
+      <ul>
+        <li>Primer item de una lista desordenada</li>
+        <li>Segundo item de una lista desordenada</li>
+      </ul>
+    </div>
+    <div>
+      <p>Lista ordenada:</p>
+      <ol>
+        <li>Primer item de una lista ordenada</li>
+        <li>Segundo item de una lista ordenada</li>
+      </ol>
+    </div>
+    <h5 id="multimedia">5. Elementos Multimedia</h5>
+    <img
+      src="./Multimedia/imagen.jpeg"
+      alt="Hinchada de Godoy Cruz Antonio Tomba"
+      width="500"
+      height="350"
+    />
+    <video width="640" height="480" controls>
+      <source src="./Multimedia/video.mp4" type="video/mp4" />
+      Tu navegador no soporta la reproducción de video.
+    </video>
+    <audio controls>
+      <source src="./Multimedia/audio.m4a" type="audio/mpeg" />
+      Tu navegador no soporta la reproducción de audio.
+    </audio>
+    <h6>6. Tablas</h6>
+    <table>
+      <thead>
+        <tr>
+          <th>Columna 1</th>
+          <th>Columna 2</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Dato 1</td>
+          <td>Dato 2</td>
+        </tr>
+        <tr>
+          <td>Dato 3</td>
+          <td>Dato 4</td>
+        </tr>
+      </tbody>
+    </table>
+    <form id="formulario">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+      <label for="message">Mensaje:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <footer>2024 Trabajo Practico de HTML</footer>
+  </body>
+</html>

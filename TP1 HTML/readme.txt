@@ -1,0 +1,1 @@
+Para este primer trabajo practica, basta descargar la carpeta y hacer click en el archivo index.html. Siempre y cuando no se haya borrado o corrido de lugar ningun archivo de la carpeta Multimedia.
