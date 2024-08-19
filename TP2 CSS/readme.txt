@@ -1,0 +1,1 @@
+Para este segundo trabajo practico, basta descargar la carpeta y hacer click en el archivo index.html. Igual que en el primer practico

@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  background-color: #777;
+  width: 100%;
+  height: 70px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  padding: 20px;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #000;
+}
+
+.section-1 p {
+  text-transform: capitalize;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+.section-1 blockquote {
+  color: #666;
+  font-style: italic;
+  border-left: 5px solid #ccc;
+  padding-left: 20px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.section-2 .caja-1 {
+  border: 1px solid #000;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 10px #888888;
+}
+
+.section-2 .caja-2 {
+  border: 3px solid #000;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 10px #888888;
+  background-color: #dd1;
+}
+
+.section-3 .caja-1 {
+  background-color: #d44;
+  position: relative;
+  padding: 10px;
+  margin-bottom: 60px;
+  top: 5px;
+  left: -10px;
+}
+
+.section-3 .caja-2 {
+  background-color: #6ad;
+  padding: 10px;
+  position: absolute;
+  left: 90px;
+  top: 50px;
+}
+
+.section-4 .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.section-4 .grid-item {
+  padding: 15px;
+  background-color: #aad;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.section-5 .animacion {
+  width: 100px;
+  height: 100px;
+  background-color: #d33;
+  transition: 2s;
+  margin: 20px;
+}
+
+.section-5 .animacion:hover {
+  background-color: #000;
+}
+
+.section-5 .mover {
+  width: 100px;
+  height: 100px;
+  background-color: #1e2;
+  border-radius: 50px;
+  margin: 20px;
+  animation: moverDerecha 2s linear infinite;
+}
+
+@keyframes moverDerecha {
+  0% {
+    transform: translateX(0px);
+  }
+  5% {
+    transform: translateX(50px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    background-color: #ccc;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .seccion {
+    width: 90%;
+    padding: 10px;
+  }
+}
