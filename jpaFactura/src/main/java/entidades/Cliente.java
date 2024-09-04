@@ -1,15 +1,17 @@
 package entidades;
 
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "Cliente")
 public class Cliente {
@@ -30,4 +32,8 @@ public class Cliente {
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "fk_domicilio")
     private Domicilio domicilio;
+
+    @OneToMany(mappedBy = "cliente")
+    @Builder.Default
+    private List<Factura> facturas = new ArrayList<Factura>();
 }

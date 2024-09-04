@@ -1,17 +1,17 @@
 package entidades;
 
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Builder
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "Articulo")
 public class Articulo {
@@ -33,4 +33,8 @@ public class Articulo {
     joinColumns = @JoinColumn(name = "articulo_id"),
     inverseJoinColumns = @JoinColumn(name = "categoria_id"))
     private final List<Categoria> categorias = new ArrayList<Categoria>();
+
+    @OneToMany(mappedBy = "articulo")
+    @Builder.Default
+    private List<DetalleFactura> detalle = new ArrayList<DetalleFactura>();
 }

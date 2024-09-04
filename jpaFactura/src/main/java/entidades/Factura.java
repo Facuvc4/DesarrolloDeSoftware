@@ -1,8 +1,17 @@
 package entidades;
 
 
-import javax.persistence.*;
+import lombok.*;
 
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+@Getter
+@Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "Factura")
 public class Factura {
@@ -19,4 +28,12 @@ public class Factura {
 
     @Column(name = "fecha")
     private String fecha;
+
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "fk_cliente")
+    private Cliente cliente;
+
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
+    private List<DetalleFactura> detalles = new ArrayList<DetalleFactura>();
 }

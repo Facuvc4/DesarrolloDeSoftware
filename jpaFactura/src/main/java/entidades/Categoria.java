@@ -1,18 +1,18 @@
 package entidades;
 
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@Builder
 @Getter
 @Setter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity
 @Table(name = "Categoria")
 public class Categoria implements Serializable {
@@ -25,5 +25,6 @@ public class Categoria implements Serializable {
     private String denominacion;
 
     @ManyToMany(mappedBy = "categorias")
+    @Builder.Default
     private List<Articulo> articulos = new ArrayList<Articulo>();
 }
