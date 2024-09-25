@@ -8,6 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @Setter
 @Getter
+@Builder
 @Table(name = "autor")
 public class Autor extends Base {
     @Column(name = "nombre")
