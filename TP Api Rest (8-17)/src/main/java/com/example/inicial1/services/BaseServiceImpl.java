@@ -8,6 +8,8 @@ import com.example.inicial1.entities.Base;
 import com.example.inicial1.repositories.BaseRepository;
 
 import jakarta.transaction.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 public abstract class BaseServiceImpl <T extends Base, ID extends Serializable> implements BaseService<T, ID> {
     protected BaseRepository<T, ID> baseRepository;
@@ -20,6 +22,17 @@ public abstract class BaseServiceImpl <T extends Base, ID extends Serializable> 
     public List<T> findAll() throws Exception {
         try {
             List<T> entities = baseRepository.findAll();
+            return entities;
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        }
+    }
+
+    @Override
+    @Transactional
+    public Page<T> findAll(Pageable pageable) throws Exception {
+        try {
+            Page<T> entities = baseRepository.findAll(pageable);
             return entities;
         } catch (Exception e) {
             throw new Exception(e.getMessage());
