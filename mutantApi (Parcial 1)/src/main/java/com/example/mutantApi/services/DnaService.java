@@ -1,9 +1,7 @@
 package com.example.mutantApi.services;
 
-import com.example.mutantApi.dtos.StatsResponseDto;
 import com.example.mutantApi.entities.Dna;
 import com.example.mutantApi.repositories.DnaRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
